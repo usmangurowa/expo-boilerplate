@@ -74,7 +74,7 @@ const DatePicker = ({
         {label ? (
           <Text
             style={tw.style(
-              `text-sm font-400 ml-1 ${error ? "text-danger" : ""}`
+              `text-sm caption-regular ml-1 ${error ? "text-danger" : ""}`
             )}
           >
             {label}
@@ -98,7 +98,7 @@ const DatePicker = ({
           <Text
             numberOfLines={1}
             style={[
-              tw.style("font-500 p-4", {
+              tw.style("caption-regular p-4", {
                 "text-sub-title": !value,
                 "text-black": !!value || !!date,
               }),

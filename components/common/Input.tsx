@@ -88,7 +88,9 @@ const Input = (
           {...props}
           style={[
             tw.style(
-              `p-3 rounded-[5px] font-500 flex-1 ${error ? "text-danger" : ""}`
+              `p-3 rounded-[5px] caption-regular flex-1 ${
+                error ? "text-danger" : ""
+              }`
             ),
             style,
           ]}

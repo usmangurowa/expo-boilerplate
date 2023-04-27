@@ -53,14 +53,17 @@ const ListItem = ({
           <Text
             numberOfLines={1}
             {...titleProps}
-            style={[tw`text-black font-500 text-lg`, titleProps?.style]}
+            style={[tw`text-black caption-regular text-lg`, titleProps?.style]}
           >
             {title}
           </Text>
           <Text
             numberOfLines={2}
             {...subTitleProps}
-            style={[tw`text-xs font-400 text-sub-title`, subTitleProps?.style]}
+            style={[
+              tw`text-xs caption-regular text-sub-title`,
+              subTitleProps?.style,
+            ]}
           >
             {subTitle}
           </Text>

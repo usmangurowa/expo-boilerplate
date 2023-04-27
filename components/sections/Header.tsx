@@ -29,7 +29,9 @@ const Header = ({
       <IconButton onPress={() => router.back()}>
         <MaterialCommunityIcons name="chevron-left" size={30} />
       </IconButton>
-      <Typography style={tw`text-xl font-500 font-semibold mx-4 capitalize`}>
+      <Typography
+        style={tw`text-xl caption-regular font-semibold mx-4 capitalize`}
+      >
         {title}
       </Typography>
       {rightIcon ? rightIcon : <View style={tw`w-8`} />}

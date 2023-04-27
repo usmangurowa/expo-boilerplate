@@ -38,7 +38,7 @@ const Chip = ({
       {Icon ? Icon : null}
       <Text
         style={[
-          tw.style(`font-700 text-${opacity === 100 ? "white" : status}`),
+          tw.style(`caption-bold text-${opacity === 100 ? "white" : status}`),
           textStyle,
         ]}
       >

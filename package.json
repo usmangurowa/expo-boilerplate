@@ -1,7 +1,7 @@
 {
   "scripts": {
     "start": "npx expo start --dev-client",
-    "start:clear": "npx expo start --dev-client --clear"
+    "start:clear": "npx expo start --dev-client --clear",
     "android": "npx expo run:android",
     "ios": "npx expo run:ios",
     "web": "npx expo start --web",
@@ -10,10 +10,10 @@
     "build:android": "eas build --profile preview --platform android",
     "build:ios:dev": "eas build --profile development --platform ios",
     "build:android:dev": "eas build --profile development --platform android",
-    "eject": "npx expo eject",
+    "eject": "npx expo eject"
   },
   "dependencies": {
-    "@expo-google-fonts/manrope": "^0.2.3",
+    "@expo-google-fonts/pt-sans-caption": "^0.2.3",
     "@gorhom/bottom-sheet": "4",
     "@react-native-community/datetimepicker": "6.7.3",
     "@react-native-community/netinfo": "9.3.7",
@@ -22,14 +22,14 @@
     "burnt": "^0.10.0",
     "expo": "~48.0.11",
     "expo-asset": "~8.9.1",
-    "expo-build-properties": "~0.5.1",
+    "expo-build-properties": "~0.6.0",
     "expo-clipboard": "~4.1.2",
     "expo-constants": "~14.2.1",
-    "expo-dev-client": "~2.1.5",
+    "expo-dev-client": "~2.2.1",
     "expo-font": "~11.1.1",
     "expo-linking": "~4.0.1",
     "expo-router": "^1.2.0",
-    "expo-splash-screen": "~0.18.1",
+    "expo-splash-screen": "~0.18.2",
     "expo-status-bar": "~1.4.2",
     "expo-system-ui": "~2.2.1",
     "formik": "^2.2.9",
@@ -39,7 +39,7 @@
     "lottie-react-native": "5.1.4",
     "react": "18.2.0",
     "react-dom": "18.2.0",
-    "react-native": "0.71.6",
+    "react-native": "0.71.7",
     "react-native-gesture-handler": "~2.9.0",
     "react-native-keyboard-aware-scroll-view": "^0.9.5",
     "react-native-mmkv": "^2.6.3",

@@ -100,7 +100,7 @@ const Button = ({
                 "text-primary ": mode === "text",
                 "opacity-0": !!loading,
               },
-              `text-base font-500 mx-2 ${textColor}`
+              `text-base caption-regular mx-2 ${textColor}`
             ),
             textStyle,
           ]}

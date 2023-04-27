@@ -100,7 +100,7 @@ const Select = ({
         {label ? (
           <Text
             style={tw.style(
-              `text-sm font-400 ml-1 ${error ? "text-danger" : ""}`
+              `text-sm caption-regular ml-1 ${error ? "text-danger" : ""}`
             )}
           >
             {label}
@@ -124,7 +124,7 @@ const Select = ({
           <Text
             numberOfLines={1}
             style={[
-              tw.style("font-500 p-4", {
+              tw.style("caption-regular p-4", {
                 "text-sub-title": !value,
                 "text-black": !!value,
               }),
@@ -159,7 +159,7 @@ const Select = ({
               placeholder="Search"
               value={search}
               onChangeText={setSearch}
-              style={tw`p-2 font-500 w-[90%] border-b border-sub-title`}
+              style={tw`p-2 caption-regular w-[90%] border-b border-sub-title`}
             />
             <SearchNormal1 size={20} color="#000" />
           </View>

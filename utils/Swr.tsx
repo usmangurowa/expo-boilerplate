@@ -1,45 +1,45 @@
 import api from "../api";
-import type { Cache } from "swr";
-import storage from "./storage";
+// import type { Cache } from "swr";
+// import storage from "./storage";
 import { ApiErrorResponse, ApiResponse } from "apisauce";
 
-export const cacheProvider = (cache: Cache) => {
-  const swrCache: Cache<any> = {
-    get: (key) => {
-      const valueFromMap = cache.get(key);
+// export const cacheProvider = (cache: Cache) => {
+//   const swrCache: Cache<any> = {
+//     get: (key) => {
+//       const valueFromMap = cache.get(key);
 
-      if (valueFromMap) {
-        return valueFromMap;
-      }
+//       if (valueFromMap) {
+//         return valueFromMap;
+//       }
 
-      if (typeof key === "string" && storage.contains(key)) {
-        const value = storage.getString(key);
-        return value ? JSON.parse(value) : undefined;
-      }
+//       if (typeof key === "string" && storage.contains(key)) {
+//         const value = storage.getString(key);
+//         return value ? JSON.parse(value) : undefined;
+//       }
 
-      return undefined;
-    },
-    set: (key, value) => {
-      cache.set(key, value);
+//       return undefined;
+//     },
+//     set: (key, value) => {
+//       cache.set(key, value);
 
-      if (typeof key === "string") {
-        storage.set(key, JSON.stringify(value));
-      }
-    },
-    delete: (key) => {
-      cache.delete(key);
+//       if (typeof key === "string") {
+//         storage.set(key, JSON.stringify(value));
+//       }
+//     },
+//     delete: (key) => {
+//       cache.delete(key);
 
-      if (typeof key === "string" && storage.contains(key)) {
-        storage.delete(key);
-      }
-    },
-    keys: function (): IterableIterator<string> {
-      throw new Error("Function not implemented.");
-    },
-  };
+//       if (typeof key === "string" && storage.contains(key)) {
+//         storage.delete(key);
+//       }
+//     },
+//     keys: function (): IterableIterator<string> {
+//       throw new Error("Function not implemented.");
+//     },
+//   };
 
-  return swrCache;
-};
+//   return swrCache;
+// };
 
 export const fetcher = (url: string) =>
   api.get(url).then((res: ApiResponse<any>) => {

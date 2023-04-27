@@ -1,7 +1,13 @@
-import { View, Text } from "react-native";
+import { View } from "react-native";
 import React from "react";
 import * as Yup from "yup";
 import Form from "../../components/Form";
+import { SafeAreaView } from "react-native-safe-area-context";
+import tw from "../../twrnc";
+import { Spacer, Text } from "../../components";
+import { FormikHelpers } from "formik";
+import { useStore } from "../../hooks";
+import { Actions } from "../../context/reducer";
 
 const validationSchema = Yup.object().shape({
   email: Yup.string().required().email().label("Email"),
@@ -11,19 +17,34 @@ const validationSchema = Yup.object().shape({
 const initialValues = { email: "", password: "" };
 
 const Login = () => {
+  const { dispatch } = useStore();
+
+  const handleLogin = (
+    data: typeof initialValues,
+    helpers: FormikHelpers<typeof initialValues>
+  ) => {
+    setTimeout(() => {
+      dispatch({ type: Actions.AUTHENTICATE, payload: data });
+      console.log(data);
+      helpers.setSubmitting(false);
+    }, 3000);
+  };
   return (
-    <View>
-      <Text>Login</Text>
+    <SafeAreaView style={tw`container`}>
+      <Text mode="h1">Login</Text>
+      <Spacer my={3} />
       <Form
         validationSchema={validationSchema}
         initialValues={initialValues}
-        onSubmit={(values) => console.log(values)}
+        onSubmit={handleLogin}
       >
         <Form.Input name="email" placeholder="Email" />
-        <Form.Input name="password" placeholder="Password" />
+        <Spacer my={3} />
+        <Form.Input name="password" placeholder="Password" type="password" />
+        <Spacer my={3} />
         <Form.Button type="submit" title="Login" />
       </Form>
-    </View>
+    </SafeAreaView>
   );
 };
 

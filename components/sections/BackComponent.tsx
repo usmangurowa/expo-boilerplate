@@ -10,7 +10,7 @@ const BackComponent = ({ title }: { title: string }) => {
   return (
     <View style={tw`flex flex-row items-center my-2`}>
       <ChevronLeft onPress={() => router.back()} />
-      <Typography style={tw`font-500 text-lg ml-2`}>{title}</Typography>
+      <Typography style={tw`caption-regular text-lg ml-2`}>{title}</Typography>
     </View>
   );
 };

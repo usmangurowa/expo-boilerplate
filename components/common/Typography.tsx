@@ -34,15 +34,15 @@ const Typography = ({
       style={[
         tw.style(
           {
-            "text-[32px] font-700 text-title": mode === "h1",
-            "text-[28px] font-700 text-title": mode === "h2",
-            "text-[24px] font-700 text-title": mode === "h3",
-            "text-[20px] font-700 text-title": mode === "h4",
-            "text-base font-700 text-title": mode === "h5",
-            "text-sm font-700 text-title": mode === "h6",
-            "text-base font-500 text-title": mode === "p",
-            "text-sm font-400 text-sub-title": mode === "sub",
-            "text-xs font-400 text-sub-title": mode === "sub2",
+            "text-[32px] caption-bold text-title": mode === "h1",
+            "text-[28px] caption-bold text-title": mode === "h2",
+            "text-[24px] caption-bold text-title": mode === "h3",
+            "text-[20px] caption-bold text-title": mode === "h4",
+            "text-base caption-bold text-title": mode === "h5",
+            "text-sm caption-bold text-title": mode === "h6",
+            "text-base caption-regular text-title": mode === "p",
+            "text-sm caption-regular text-sub-title": mode === "sub",
+            "text-xs caption-regular text-sub-title": mode === "sub2",
           },
           { color: tw.color(color) }
         ),

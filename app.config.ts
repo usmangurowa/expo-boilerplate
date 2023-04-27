@@ -1,10 +1,11 @@
 const IS_DEV = process.env.APP_ENVIRONMENT === "development";
 
 const config = {
-  name: IS_DEV ? "(project name) Dev" : "(project name)", // TODO: Add project name
-  slug: "(project-slug)", // TODO: Add project slug
-  scheme: "(project-scheme)", // TODO: Add project scheme
+  name: IS_DEV ? "project Dev" : "project", // TODO: Add project name
+  slug: "project", // TODO: Add project slug
+  scheme: "project", // TODO: Add project scheme
   version: "1.0.0",
+  owner: "user", // TODO: Add your username
   orientation: "portrait",
   icon: "./assets/icon.png",
   userInterfaceStyle: "light",
@@ -36,7 +37,7 @@ const config = {
   },
   extra: {
     eas: {
-      projectId: "", // TODO: Add EAS project ID
+      projectId: "", // TODO: Add EAS project ID or run `eas init` to create a new one (https://docs.expo.dev/build/eas-json/)
     },
   },
 

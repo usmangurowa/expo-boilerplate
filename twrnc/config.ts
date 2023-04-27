@@ -74,26 +74,11 @@ module.exports = {
         },
         container: `px-7 lg:p-10 tablet:p-12`, // Container
         "container-sm": `px-5 lg:p-8 tablet:p-10`, // Container small
-        "font-200": {
-          fontFamily: "Manrope_200ExtraLight", // Font names and weights
+        "caption-regular": {
+          fontFamily: "PTSansCaption_400Regular", // Light caption
         },
-        "font-300": {
-          fontFamily: "Manrope_300Light",
-        },
-        "font-400": {
-          fontFamily: "Manrope_400Regular",
-        },
-        "font-500": {
-          fontFamily: "Manrope_500Medium",
-        },
-        "font-600": {
-          fontFamily: "Manrope_600SemiBold",
-        },
-        "font-700": {
-          fontFamily: "Manrope_700Bold",
-        },
-        "font-800": {
-          fontFamily: "Manrope_800ExtraBold",
+        "caption-bold": {
+          fontFamily: "PTSansCaption_700Bold", // Bold caption
         },
         "resize-image": {
           resizeMode: Platform.OS === "ios" ? "contain" : "center", // Image resize mode
